@@ -16,6 +16,6 @@ This is example code and not supported in any way by Cantemo AB.
 Screen Shot
 ------------------------------------
 
-.. image:: https://github.com/cantemo/ExtraItemPageInformationExample/raw/master/framerate.png
+.. image:: https://raw.githubusercontent.com/Cantemo/Extra-ItemPage-Information-Example/master/framerate.png
    :width: 100 %
    :alt: Example of framerate that has been added to the extra information section
