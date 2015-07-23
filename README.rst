@@ -7,8 +7,11 @@ This is an example app which implements some extra information for video items -
 Installation
 -------------
 
-To install this plugin, just place the entire directory under
-/opt/cantemo/portal/portal/plugins
+To install this plugin, just place the AddExtraItemInformation directory under
+/opt/cantemo/portal/portal/plugins and run the command
+
+supervisorctl restart all
+
 
 This is example code and not supported in any way by Cantemo AB.
 
