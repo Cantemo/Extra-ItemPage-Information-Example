@@ -45,7 +45,7 @@ class FrameRateItemPage(Plugin):
         self.guid = "B56D051D-93BB-40E0-8DE2-3F80E219BD2A"
 
     def return_string(self, tagname, *args):
-        extra_info = ""
+        extra_info = " "
         valid_item_types = ('sequence', 'video',)
         context = args[1]
         item = context.get('item', None)
