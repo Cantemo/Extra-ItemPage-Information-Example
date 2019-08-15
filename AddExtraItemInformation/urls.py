@@ -3,7 +3,7 @@
 """
 import logging
 
-from django.conf.urls.defaults import *
+from django.conf.urls import url
 
 # This new app handles the request to the URL by responding with the view which is loaded 
 # from portal.plugins.hbo.views.py. Inside that file is a class which responsedxs to the 
