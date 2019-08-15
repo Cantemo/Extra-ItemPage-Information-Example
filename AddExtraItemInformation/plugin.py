@@ -12,6 +12,7 @@ from portal.generic.plugin_interfaces import (IPluginURL, IPluginBlock, IAppRegi
 
 log = logging.getLogger(__name__)
 
+
 class ExtraItemInformationRegister(Plugin):
     # This adds it to the list of installed Apps
     # Please update the information below with the author etc..
@@ -23,16 +24,18 @@ class ExtraItemInformationRegister(Plugin):
         log.debug('Register the App')
 
     def __call__(self):
-        from __init__ import __version__ as versionnumber
+        from .__init__ import __version__ as versionnumber
         _app_dict = {
                 'name': 'ExtraItemInfo',
-                'version': '0.0.1',
+                'version': versionnumber,
                 'author': '',
                 'author_url': '',
                 'notes': 'This App is example code and not supported by Cantemo AB.'}
         return _app_dict
 
-extraiteminfo = ExtraItemInformationRegister()
+
+ExtraItemInformationRegister()
+
 
 class FrameRateItemPage(Plugin):
     """
@@ -42,7 +45,7 @@ class FrameRateItemPage(Plugin):
 
     def __init__(self):
         self.name = "ItemTechMetadataPlugin"
-        self.guid = "B56D051D-93BB-40E0-8DE2-3F80E219BD2A"
+        self.plugin_guid = "B56D051D-93BB-40E0-8DE2-3F80E219BD2A"
 
     def return_string(self, tagname, *args):
         extra_info = " "
@@ -55,6 +58,7 @@ class FrameRateItemPage(Plugin):
                 extra_info += item.getFramesPerSecond() + "fps"
                 extra_info += "</dd></dl>"
 
-        return {'guid':self.guid, 'template': extra_info} 
+        return {'guid': self.plugin_guid, 'template': extra_info}
 
-framerateitempage = FrameRateItemPage()
+
+FrameRateItemPage()
